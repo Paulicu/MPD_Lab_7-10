@@ -42,6 +42,11 @@
                     MaximumWidthRequest="300"
                     Clicked="OnChooseButtonClicked"
             />
+            <StackLayout HeightRequest="10" />
+            <Button Text="Delete Item"
+                    MaximumWidthRequest="300"
+                    Clicked="OnDeleteItemButtonClicked" 
+            />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

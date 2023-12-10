@@ -89,5 +89,12 @@ namespace Uifalean_Paul_Lab7.Data
             + " on P.ID = LP.ProductID where LP.ShopListID = ?",
             shoplistid);
         }
+
+        public Task<int> DeleteItemFromShopListAsync(int productId, int shopListId)
+        {
+            return _database.Table<ListProduct>()
+                .Where(lp => lp.ProductID == productId && lp.ShopListID == shopListId)
+                .DeleteAsync();
+        }
     }
 }
